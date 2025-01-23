@@ -1,3 +1,4 @@
+package Museu;
 import java.time.Year;
 
 public abstract class obraDeArte{
@@ -36,7 +37,7 @@ public abstract class obraDeArte{
         return altura;
     }
 
-    public  int getIdade(){
+    public int getIdade(){
         return Year.now().getValue() - getAnoCriacao();
     }
 

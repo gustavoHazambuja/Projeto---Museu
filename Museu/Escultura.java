@@ -1,3 +1,4 @@
+package Museu;
 public class Escultura extends obraDeArte {
     
     private String tipoMaterial;

@@ -1,3 +1,4 @@
+package Museu;
 public class App {
     public static void main(String[] args) {
         
@@ -18,6 +19,7 @@ public class App {
         m.adicionarObraDeArte(new Escultura("O Beijo", "Auguste Rodin", 15000000, 1889, 1.80, "Mármore"));
         m.adicionarObraDeArte(new Escultura("Reclining Figure", "Henry Moore", 25000000, 1951, 3.05, "Bronze"));
 
+        
         System.out.println("Obras listadas:");
         m.listarObras();
 
@@ -25,7 +27,7 @@ public class App {
         System.out.println("************** Estatísticas ***************");
         System.out.println("*******************************************");
 
-        System.out.printf("Quantidade de obras no museu: %d\n",m.getQtd());
+        System.out.printf("Quantidade de obras no museu: %d\n",m.qtdObras());
         System.out.printf("Quantidade de pinturas no museu: %d\n",m.qtdPinturas());
         System.out.printf("Quantidade de escultuas no museu: %d\n",m.qtdEsculturas());
 
@@ -40,22 +42,24 @@ public class App {
 
         System.out.println("*****************************************");
         System.out.printf("Obras com mais de 300 anos:\n %s\n", m.obrasMais300Anos());
+        System.out.println("*********************************************");
         System.out.printf("Obras que custam mais de 400 milhões de dólares:\n %s\n", m.obrasMais400milhoes());
 
         System.out.println("*****************************************");
         System.out.printf("Obra mais cara com menos de 200 anos:%s\n", m.obraMaisCaraComMenosDe200Anos());
+        System.out.println("*****************************************");
         System.out.printf("Obra mais barata com mais de 300 anos:%s\n", m.obraMaisBarataComMaisDe300Anos());
 
         System.out.println("*****************************************");
         System.out.printf("Obra mais antiga: %s\n", m.obraMaisAntiga());
+        System.out.println("*****************************************");
         System.out.printf("Obra mais recente: %s\n", m.obraMaisRecente());
 
         System.out.println("*****************************************");
         System.out.printf("Obra mais cara: %s\n", m.obraMaisCara());
+        System.out.println("*****************************************");
         System.out.printf("Obra mais barata: %s\n", m.obrasMaisBarata());
 
     }
-  
-
 
 }

@@ -1,3 +1,4 @@
+package Museu;
 public class Pintura extends obraDeArte {
     
     private String tipoTinta;
