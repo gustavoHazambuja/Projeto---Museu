@@ -1,6 +1,10 @@
 package Museu;
+
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+        Scanner dados = new Scanner(System.in);
         
         Museu m = new Museu();
 
@@ -59,6 +63,14 @@ public class App {
         System.out.printf("Obra mais cara: %s\n", m.obraMaisCara());
         System.out.println("*****************************************");
         System.out.printf("Obra mais barata: %s\n", m.obrasMaisBarata());
+
+        System.out.println("Informe quantas buscas deseja fazer:");
+        int buscas = dados.nextInt();
+
+        for(int i = 0; i< buscas; i++){
+            m.buscarObraDeArte();
+          
+        }
 
     }
 

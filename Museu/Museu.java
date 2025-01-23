@@ -130,18 +130,25 @@ public class Museu {
             .orElse("Nenhuma obra encontrada!");
     }
 
-    public obraDeArte buscarObraDeArte(){
+    public void buscarObraDeArte(){
         System.out.println("Informe o nome da obra de arte que deseja buscar:");
         String nome = dados.nextLine().toLowerCase();
 
         if(obras.isEmpty()){
             System.out.println("Nenhuma obra no museu.");
         }
-        
-        return obras.stream()
-            .filter(obra -> obra.getNomeObra().contains(nome.toLowerCase()))
-            .findFirst()
-            .orElse(null);
+
+      boolean encontrou = false;
+
+        for(obraDeArte obra: obras){
+            if(obra.getNomeObra().toLowerCase().contains(nome.toLowerCase())){
+                System.out.println("Obra encontrada: " + obra);
+                encontrou = true;
+            }
+        }
+        if(!encontrou){
+            System.out.println("Obra não encontrada.");
+        }
     }
     
 }
