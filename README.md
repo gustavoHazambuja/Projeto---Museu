@@ -14,7 +14,8 @@ Este projeto é uma aplicação Java para gerenciamento de um museu. Ele foi des
 - Streams
 - Herança
 - Coleções (List, Set)
-  
+
+```
 
 # Autor
 
